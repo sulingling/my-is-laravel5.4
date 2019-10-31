@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 // 文章列表页面
 Route::get('/posts', '\App\Http\Controllers\PostsController@index');
 // 创建文章

@@ -81,5 +81,4 @@ class PostsController extends Controller{
 	public function delete(){
 		return '文章删除页面';
 	}
-	
 }
