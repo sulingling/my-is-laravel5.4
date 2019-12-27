@@ -9,13 +9,14 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // 文章列表页面
+Route::get('/', '\App\Http\Controllers\PostsController@index');
 Route::get('/posts', '\App\Http\Controllers\PostsController@index');
 // 创建文章
 Route::get('/posts/create', '\App\Http\Controllers\PostsController@create');
