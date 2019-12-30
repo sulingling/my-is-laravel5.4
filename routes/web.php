@@ -10,11 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 // 文章列表页面
 Route::get('/', '\App\Http\Controllers\PostsController@index');
 Route::get('/posts', '\App\Http\Controllers\PostsController@index');
