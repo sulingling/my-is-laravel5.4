@@ -15,7 +15,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return '文章列表页面';
+        return view('posts.index');
     }
 
     /**
@@ -51,7 +51,7 @@ class PostsController extends Controller
      */
     public function show()
     {
-        return '文章详情页面';
+        return view('posts.show');
     }
 
     /**
