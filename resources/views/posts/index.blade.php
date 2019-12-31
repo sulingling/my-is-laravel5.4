@@ -5,14 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="csrf-token" content="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy">
     <title>laravel for blog</title>
-    <!-- Bootstrap core CSS -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="{{ URL::asset('css/blog.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/wangEditor.min.css') }}">
 </head>
@@ -59,31 +56,29 @@
             <div class="col-sm-8 blog-main">
                 <div>
                     <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-example" data-slide-to="1"></li>
                             <li data-target="#carousel-example" data-slide-to="2"></li>
-                        </ol><!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg" alt="..." />
-                                <div class="carousel-caption">...</div>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg" alt="..." />
+                                    <div class="carousel-caption">...</div>
+                                </div>
+                                <div class="item">
+                                    <img src="http://ww3.sinaimg.cn/large/44287191gw1excbq5iwm6j21400min3o.jpg" alt="..." />
+                                    <div class="carousel-caption">...</div>
+                                </div>
+                                <div class="item">
+                                    <img src="http://ww2.sinaimg.cn/large/44287191gw1excbq4kx57j21400migs4.jpg" alt="..." />
+                                    <div class="carousel-caption">...</div>
+                                </div>
                             </div>
-                            <div class="item">
-                                <img src="http://ww3.sinaimg.cn/large/44287191gw1excbq5iwm6j21400min3o.jpg" alt="..." />
-                                <div class="carousel-caption">...</div>
-                            </div>
-                            <div class="item">
-                                <img src="http://ww2.sinaimg.cn/large/44287191gw1excbq4kx57j21400migs4.jpg" alt="..." />
-                                <div class="carousel-caption">...</div>
-                            </div>
-                        </div>
-                        <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-example" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span></a>
-                        <a class="right carousel-control" href="#carousel-example" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span></a>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span></a>
+                            <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                 </div>
                 <div style="height: 20px;"></div>
@@ -138,7 +133,7 @@
                         <li><a href="http://127.0.0.1:8000/posts?page=10">10</a></li>
                         <li><a href="http://127.0.0.1:8000/posts?page=2" rel="next">&raquo;</a></li>
                     </ul>
-                </div><!-- /.blog-main -->
+                </div>
             </div>
             <div id="sidebar" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <aside id="widget-welcome" class="widget panel panel-default">
@@ -180,8 +175,8 @@
                 </aside>
             </div>
         </div>
-    </div><!-- /.row -->
-    </div><!-- /.container -->
+    </div>
+    </div>
     <footer class="blog-footer">
         <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
         <p>

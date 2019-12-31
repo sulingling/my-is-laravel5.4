@@ -27,7 +27,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return '创建文章表单页面';
+        return view('posts.create');
     }
 
     /**
@@ -63,7 +63,7 @@ class PostsController extends Controller
      */
     public function edit()
     {
-        return '编辑文章表单页面';
+        return view('posts.edit');
     }
 
     /**
