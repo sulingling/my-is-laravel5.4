@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Posts;
 use Illuminate\Routing\Controller;
 
 class PostsController extends Controller
@@ -15,7 +16,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $posts = Posts::orderBy('created_at', 'desc')
+            ->paginate(6);
+        return view('posts.index', compact('posts'));
     }
 
     /**
