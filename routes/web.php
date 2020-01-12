@@ -17,9 +17,11 @@ Route::get('/posts', '\App\Http\Controllers\PostsController@index');
 Route::get('/posts/create', '\App\Http\Controllers\PostsController@create');
 Route::post('/posts', '\App\Http\Controllers\PostsController@store');
 // 文章详情页面
-Route::get('/posts/{post}', '\App\Http\Controllers\PostsController@show');
+Route::get('/posts/{posts}', '\App\Http\Controllers\PostsController@show');
 // 编辑文章
-Route::get('/posts/{post}/edit', '\App\Http\Controllers\PostsController@edit');
-Route::put('/posts/{post}', '\App\Http\Controllers\PostsController@update');
+Route::get('/posts/{posts}/edit', '\App\Http\Controllers\PostsController@edit');
+Route::put('/posts/{posts}', '\App\Http\Controllers\PostsController@update');
 // 删除文章
 Route::get('/posts/delete', '\App\Http\Controllers\PostsController@delete');
+// 文件上传
+Route::post('/posts/image/upload', '\App\Http\Controllers\PostsController@imageUpload');

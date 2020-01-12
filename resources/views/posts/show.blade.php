@@ -3,21 +3,18 @@
 <div class="col-sm-8 blog-main">
     <div class="blog-post">
         <div style="display:inline-flex">
-            <h2 class="blog-post-title">你好你好</h2>
-            <a style="margin: auto" href="/posts/62/edit">
+            <h2 class="blog-post-title">{{$posts->title}}</h2>
+            <a style="margin: auto" href="/posts/{{$posts->post_id}}/edit">
                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
             </a>
-            <a style="margin: auto" href="/posts/62/delete">
+            <a style="margin: auto" href="/posts/{{$posts->post_id}}/delete">
                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
             </a>
         </div>
-        <p class="blog-post-meta">May 14, 2017 by <a href="#">Kassandra Ankunding2</a></p>
-        <p>
-            <p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好<img src="http://127.0.0.1:8000/storage/72c76b674ec8793fcfd6555ff371bfbd/nxC9ozLfkORmoY92q9lPsejXchVvdNO2cwHiR2Jf.jpeg" alt="63" style="max-width: 100%;">你好你好似懂非懂说</p>
-            <p><br></p>
-        </p>
+        <p class="blog-post-meta">{{$posts->created_at->toFormattedDateString()}} <a href="#">Kassandra Ankunding2</a></p>
+            {!! $posts->content !!}
         <div>
-            <a href="/posts/62/zan" type="button" class="btn btn-primary btn-lg">赞</a>
+            <a href="/posts/{{$posts->post_id}}/zan" type="button" class="btn btn-primary btn-lg">赞</a>
         </div>
     </div>
     <div class="panel panel-default">
@@ -36,7 +33,7 @@
         <ul class="list-group">
             <form action="/posts/comment" method="post">
                 <input type="hidden" name="_token" value="4BfTBDF90Mjp8hdoie6QGDPJF2J5AgmpsC9ddFHD">
-                <input type="hidden" name="post_id" value="62" />
+                <input type="hidden" name="post_id" value="{{$posts->post_id}}" />
                 <li class="list-group-item">
                     <textarea name="content" class="form-control" rows="10"></textarea>
                     <button class="btn btn-default" type="submit">提交</button>

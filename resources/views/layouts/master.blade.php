@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="csrf-token" content="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'laravel for blog')</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ URL::asset('css/blog.css') }}" rel="stylesheet">
