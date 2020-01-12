@@ -22,6 +22,6 @@ Route::get('/posts/{posts}', '\App\Http\Controllers\PostsController@show');
 Route::get('/posts/{posts}/edit', '\App\Http\Controllers\PostsController@edit');
 Route::put('/posts/{posts}', '\App\Http\Controllers\PostsController@update');
 // 删除文章
-Route::get('/posts/delete', '\App\Http\Controllers\PostsController@delete');
+Route::get('/posts/{posts}/delete', '\App\Http\Controllers\PostsController@delete');
 // 文件上传
 Route::post('/posts/image/upload', '\App\Http\Controllers\PostsController@imageUpload');
