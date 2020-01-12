@@ -81,6 +81,7 @@ class PostsController extends Controller {
 	 */
 	// public function update(PostsModel $posts) {
 	public function update() {
+		// 用户权限认证
 		$this->validate(request(), [
 			'title' => 'required|string|max:100|min:5', //非空|字符串|最大长度|最小长度
 			'content' => 'required|string|max:500|min:10',
@@ -101,8 +102,10 @@ class PostsController extends Controller {
 	 * @version  [version]
 	 * @return   [type]     [description]
 	 */
-	public function delete() {
-		return '文章删除页面';
+	public function delete(PostsModel $posts) {
+		// 用户的权限认证
+		$posts->delete();
+		return redirect('/posts');
 	}
 
 	/**
