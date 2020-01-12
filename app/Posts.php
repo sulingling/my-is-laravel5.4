@@ -36,7 +36,7 @@ class Posts extends Model {
 		if (empty($params)) {
 			return false;
 		}
-		$model = getPosts($params['post_id']);
+		$model = self::getPosts($params['post_id']);
 		if (empty($model)) {
 			return false;
 		}
@@ -53,7 +53,6 @@ class Posts extends Model {
 	 * @return   object             [文章对象]
 	 */
 	protected static function getPosts($postId = 0) {
-		return self::where(['post_id' => $postId])
-			->find();
+		return self::find($postId);
 	}
 }

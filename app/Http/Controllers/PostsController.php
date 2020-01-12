@@ -79,15 +79,19 @@ class PostsController extends Controller {
 	 * @version  [version]
 	 * @return   [type]     [description]
 	 */
-	public function update(Request $request) {
-		$this->validate($request, [
+	// public function update(PostsModel $posts) {
+	public function update() {
+		$this->validate(request(), [
 			'title' => 'required|string|max:100|min:5', //非空|字符串|最大长度|最小长度
 			'content' => 'required|string|max:500|min:10',
 		]);
 		$params = request()->all();
-		$postId = PostsModel::editPosts($params);
-		return redirect('/posts/' . $postId . '/edit');
 
+		$postId = PostsModel::editPosts($params);
+		if ($postId) {
+			return redirect('/posts/' . $postId);
+		}
+		return redirect('/posts/' . $params['post_id'] . '/edit');
 	}
 
 	/**
