@@ -1,15 +1,20 @@
 <?php
+// 用户模块
+// 注册页面
+Route::get('/register', '\App\Http\Controllers\RegisterController@index');
+// 注册行为
+Route::post('/register', '\App\Http\Controllers\RegisterController@register');
+// 登陆页面
+Route::get('login', '\App\Http\Controllers\LoginController@index');
+// 登陆行为
+Route::post('login', '\App\Http\Controllers\LoginController@login');
+// 登出行为
+Route::get('logout', '\App\Http\Controllers\LoginController@logout');
+// 个人设置页面
+Route::get('/user/me/setting', '\App\Http\Controllers\UserController@setting');
+// 个人设置行为
+Route::post('/user/me/setting', '\App\Http\Controllers\UserController@settingStore');
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
- */
 // 文章列表页面
 Route::get('/', '\App\Http\Controllers\PostsController@index');
 Route::get('/posts', '\App\Http\Controllers\PostsController@index');
