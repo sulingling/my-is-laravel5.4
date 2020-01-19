@@ -23,7 +23,20 @@ class LoginController extends Controller {
 	 * @return   [type]     [description]
 	 */
 	public function login() {
-		return '登陆行为';
+		// 验证
+		$this->validate(request(), [
+			'email' => 'required|email',
+			'password' => 'required|min:5|max:10',
+			'is_remember' => 'integer',
+		]);
+		// 逻辑
+		$user = request(['email', 'password']);
+		$isRemember = request('is_remember');
+		// 渲染
+		if (\Auth::attempt($user, $isRemember)) {
+			return redirect('/posts');
+		}
+		return \Redirect::back()->withErrors('邮箱密码不匹配');
 	}
 
 	/**
@@ -34,6 +47,7 @@ class LoginController extends Controller {
 	 * @return   [type]     [description]
 	 */
 	public function logout() {
-		return '登出行为';
+		\Auth::logout();
+		return redirect('/login');
 	}
 }

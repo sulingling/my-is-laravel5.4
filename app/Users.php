@@ -2,9 +2,11 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Users extends Model {
+class Users extends Authenticatable {
+	protected $table = 'users'; // 定义用户表表名
+	protected $primaryKey = 'user_id'; // 定义用户表主键
 
 	/**
 	 * 用户注册

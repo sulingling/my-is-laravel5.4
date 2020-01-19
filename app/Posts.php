@@ -9,11 +9,59 @@ class Posts extends Model {
 	protected $primaryKey = 'post_id';
 
 	/**
+	 * 评论模型
+	 * @Author   sulingling
+	 * @DateTime 2020-01-18
+	 * @param    [param]
+	 * @version  [version]
+	 * @return   object     [对象]
+	 */
+	public function comments() {
+		return $this->hasMany('App\Comments', 'post_id', 'post_id')->orderBy('created_at', 'desc');
+	}
+
+	/**
+	 * 关联用户
+	 * @Author   sulingling
+	 * @DateTime 2020-01-18
+	 * @param    [param]
+	 * @version  [version]
+	 * @return   object     [对象]
+	 */
+	public function user() {
+		return $this->belongsTo('App\Users', 'user_id', 'user_id');
+	}
+
+	/**
+	 * 和用户进行关联
+	 * @Author   sulingling
+	 * @DateTime 2020-01-19
+	 * @version  [version]
+	 * @param    integer    $userId [用户ID]
+	 * @return   object             [对象]
+	 */
+	public function userAssists($userId = 0) {
+		return $this->hasOne('App\Assists', 'post_id', 'post_id')->where('user_id', $userId);
+	}
+
+	/**
+	 * 获取文章所有的赞
+	 * @Author   sulingling
+	 * @DateTime 2020-01-19
+	 * @param    [param]
+	 * @version  [version]
+	 * @return   [type]     [description]
+	 */
+	public function assists() {
+		return $this->hasMany('App\Assists', 'post_id', 'post_id');
+	}
+
+	/**
 	 * 文章添加页面
 	 * @Author   sulingling
 	 * @DateTime 2020-01-11
-	 * @param    array      $params [description]
-	 * @return   boolean     对象。  [true | false]
+	 * @param    array      $params [前台提交过来的数据]
+	 * @return   boolean     对象    [true | false]
 	 */
 	public static function postsSave($params = []) {
 		if (empty($params)) {
@@ -22,6 +70,7 @@ class Posts extends Model {
 		$model = new self();
 		$model->title = $params['title'];
 		$model->content = $params['content'];
+		$model->user_id = \Auth::id();
 		return $model->save();
 	}
 
@@ -42,6 +91,7 @@ class Posts extends Model {
 		}
 		$model->title = $params['title'];
 		$model->content = $params['content'];
+		$model->user_id = \Auth::id();
 		return $model->save() ? $model->post_id : false;
 	}
 
@@ -55,4 +105,5 @@ class Posts extends Model {
 	protected static function getPosts($postId = 0) {
 		return self::find($postId);
 	}
+
 }

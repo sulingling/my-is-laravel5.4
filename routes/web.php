@@ -23,6 +23,10 @@ Route::get('/posts/create', '\App\Http\Controllers\PostsController@create');
 Route::post('/posts', '\App\Http\Controllers\PostsController@store');
 // 文章详情页面
 Route::get('/posts/{posts}', '\App\Http\Controllers\PostsController@show');
+// 文章点赞
+Route::get('/posts/{post}/assist', '\App\Http\Controllers\PostsController@assist');
+// 文章取消赞
+Route::get('/posts/{post}/unassists', '\App\Http\Controllers\PostsController@unAssist');
 // 编辑文章
 Route::get('/posts/{posts}/edit', '\App\Http\Controllers\PostsController@edit');
 Route::put('/posts/{posts}', '\App\Http\Controllers\PostsController@update');
@@ -30,3 +34,5 @@ Route::put('/posts/{posts}', '\App\Http\Controllers\PostsController@update');
 Route::get('/posts/{posts}/delete', '\App\Http\Controllers\PostsController@delete');
 // 文件上传
 Route::post('/posts/image/upload', '\App\Http\Controllers\PostsController@imageUpload');
+// 提交评论
+Route::post('/posts/{post}/comment', '\App\Http\Controllers\PostsController@comment');
