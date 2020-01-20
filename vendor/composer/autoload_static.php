@@ -292,6 +292,7 @@ class ComposerStaticInit1cff50d3a5e82fac261e083069aebb6d
     );
 
     public static $classMap = array (
+        'App\\Assists' => __DIR__ . '/../..' . '/app/Assists.php',
         'App\\Comments' => __DIR__ . '/../..' . '/app/Comments.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -322,8 +323,9 @@ class ComposerStaticInit1cff50d3a5e82fac261e083069aebb6d
         'Carbon\\Laravel\\ServiceProvider' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'Carbon\\Upgrade' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Upgrade.php',
-        'CreateAssistTable' => __DIR__ . '/../..' . '/database/migrations/2020_01_19_213014_create_assist_table.php',
+        'CreateAssistsTable' => __DIR__ . '/../..' . '/database/migrations/2020_01_19_213014_create_assists_table.php',
         'CreateCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2020_01_18_212935_create_comments_table.php',
+        'CreateFansTable' => __DIR__ . '/../..' . '/database/migrations/2020_01_20_222906_create_fans_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePostsTable' => __DIR__ . '/../..' . '/database/migrations/2020_01_04_080024_create_posts_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',

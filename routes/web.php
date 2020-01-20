@@ -36,3 +36,10 @@ Route::get('/posts/{posts}/delete', '\App\Http\Controllers\PostsController@delet
 Route::post('/posts/image/upload', '\App\Http\Controllers\PostsController@imageUpload');
 // 提交评论
 Route::post('/posts/{post}/comment', '\App\Http\Controllers\PostsController@comment');
+
+// 个人中心
+Route::get('/user/{user}', '\App\Http\Controllers\UserController@show');
+// 个人中心关注
+Route::post('/user/{user}/fan', '\App\Http\Controllers\UserController@fan');
+// 个人中心取消关注
+Route::post('/user/{user}/unfan', '\App\Http\Controllers\UserController@unFan');

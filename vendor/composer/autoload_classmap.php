@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Assists' => $baseDir . '/app/Assists.php',
     'App\\Comments' => $baseDir . '/app/Comments.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -36,8 +37,9 @@ return array(
     'Carbon\\Laravel\\ServiceProvider' => $vendorDir . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
     'Carbon\\Upgrade' => $vendorDir . '/nesbot/carbon/src/Carbon/Upgrade.php',
-    'CreateAssistTable' => $baseDir . '/database/migrations/2020_01_19_213014_create_assist_table.php',
+    'CreateAssistsTable' => $baseDir . '/database/migrations/2020_01_19_213014_create_assists_table.php',
     'CreateCommentsTable' => $baseDir . '/database/migrations/2020_01_18_212935_create_comments_table.php',
+    'CreateFansTable' => $baseDir . '/database/migrations/2020_01_20_222906_create_fans_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePostsTable' => $baseDir . '/database/migrations/2020_01_04_080024_create_posts_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
