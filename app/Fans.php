@@ -16,7 +16,7 @@ class Fans extends Model {
 	 * @return   [type]     [description]
 	 */
 	public function fanUser() {
-		return $this->hasOne('App\Users', 'user_id', 'fan_id');
+		return $this->hasOne(\App\Users::class, 'user_id', 'fan_id');
 	}
 
 	/**
@@ -26,7 +26,7 @@ class Fans extends Model {
 	 * @version  [version]
 	 * @return   [type]     [description]
 	 */
-	public function starUser()}{
-		return $this->hasOne('App\Users', 'user_id', 'star_id');	
+	public function starUser() {
+		return $this->hasOne(\App\Users::class, 'user_id', 'star_id');
 	}
 }

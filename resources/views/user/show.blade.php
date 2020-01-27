@@ -1,137 +1,51 @@
 @extends('layouts.master')
 @section('content')
-
-    <div class="col-sm-8">
-        <blockquote>
-            <p><img src="/storage/9f0b0809fd136c389c20f949baae3957/iBkvipBCiX6cHitZSdTaXydpen5PBiul7yYCc88O.jpeg" alt="" class="img-rounded" style="border-radius:500px; height: 40px"> Kassandra Ankunding2
-            </p>
-
-
-            <footer>关注：4｜粉丝：0｜文章：9</footer>
-                    </blockquote>
-    </div>
-    <div class="col-sm-8 blog-main">
-        <div class="nav-tabs-custom">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">文章</a></li>
-                <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">关注</a></li>
-                <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false">粉丝</a></li>
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane active" id="tab_1">
-                                            <div class="blog-post" style="margin-top: 30px">
-                                                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 6天前</p>
-                            <p class=""><a href="/posts/62" >你好你好</a></p>
-
-
-                            <p><p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好...</p>
-                        </div>
-                                            <div class="blog-post" style="margin-top: 30px">
-                                                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 6天前</p>
-                            <p class=""><a href="/posts/61" >你好你好</a></p>
-
-
-                            <p><p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好...</p>
-                        </div>
-                                            <div class="blog-post" style="margin-top: 30px">
-                                                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 6天前</p>
-                            <p class=""><a href="/posts/60" >你好你好</a></p>
-
-
-                            <p><p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好...</p>
-                        </div>
-                                            <div class="blog-post" style="margin-top: 30px">
-                                                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 6天前</p>
-                            <p class=""><a href="/posts/59" >你好你好</a></p>
-
-
-                            <p><p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好...</p>
-                        </div>
-                                            <div class="blog-post" style="margin-top: 30px">
-                                                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 1周前</p>
-                            <p class=""><a href="/posts/58" >自动放大舒服的撒</a></p>
-
-
-                            <p>我们坚持一个中国我们坚持一个中国我们坚持一个中国我们坚持一个中国我们坚持一个中国我们坚持一个中国我们...</p>
-                        </div>
-                                            <div class="blog-post" style="margin-top: 30px">
-                                                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 1周前</p>
-                            <p class=""><a href="/posts/57" >反对撒发的撒风反对撒发的撒风反对撒发的撒风</a></p>
-
-
-                            <p>反对撒发的撒风反对撒发的撒风反对撒发的撒风反对撒发的撒风反对撒发的撒风反对撒发的撒风反对撒发的撒风反...</p>
-                        </div>
-                                            <div class="blog-post" style="margin-top: 30px">
-                                                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 1周前</p>
-                            <p class=""><a href="/posts/56" >dfdasfd</a></p>
-
-
-                            <p>vadfdasfdas vadfdasfdas vadfdasfdas vadfdasfdas vadfdasfdas vadfdasfdas vadfdasfdas vadfdasfdas vadf...</p>
-                        </div>
-                                            <div class="blog-post" style="margin-top: 30px">
-                                                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 1个月前</p>
-                            <p class=""><a href="/posts/55" >32323</a></p>
-
-
-                            <p>232323232323232323232323232323232323232323232323232323
-232323232323232323232323
-232323232323232323...</p>
-                        </div>
-                                            <div class="blog-post" style="margin-top: 30px">
-                                                        <p class=""><a href="/user/5">Kassandra Ankunding2</a> 1个月前</p>
-                            <p class=""><a href="/posts/54" >dafdsafads</a></p>
-
-
-                            <p>dafdsafadsdafdsafadsdafdsafadsdafdsafads
-
-dafdsafadsdafdsafadsdafdsafadsdafdsafadsdafdsafadsdafdsa...</p>
-                        </div>
-                                    </div>
-                <!-- /.tab-pane -->
-                <div class="tab-pane" id="tab_2">
-                                                                    <div class="blog-post" style="margin-top: 30px">
-                            <p class="">Jadyn Medhurst Jr.</p>
-                            <p class="">关注：1 | 粉丝：1｜ 文章：0</p>
-
-                            <div>
-                    <button class="btn btn-default like-button" like-value="1" like-user="6" _token="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy" type="button">取消关注</button>
+<div class="col-sm-8">
+    <blockquote>
+        <p><img src="/storage/9f0b0809fd136c389c20f949baae3957/iBkvipBCiX6cHitZSdTaXydpen5PBiul7yYCc88O.jpeg" alt="" class="img-rounded" style="border-radius:500px; height: 40px"> {{$userInfo->name}}
+        </p>
+        <footer>关注：{{$userInfo->fan_posts_count}}｜粉丝：{{$userInfo->star_posts_count}}｜文章：{{$userInfo->user_posts_count}}</footer>
+        @include('user.badges.like', ['target_user' => $userInfo])
+    </blockquote>
+</div>
+<div class="col-sm-8 blog-main">
+    <div class="nav-tabs-custom">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">文章</a></li>
+            <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">关注</a></li>
+            <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false">粉丝</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab_1">
+                @foreach($postInfo as $post)
+                <div class="blog-post" style="margin-top: 30px">
+                    <p class=""><a href="/user/{{$post->user->user_id}}">{{$post->user->name}}</a> {{$post->created_at->diffForHumans()}}</p>
+                    <p class=""><a href="/posts/{{$post->post_id}}">{{$post->title}}</a></p>
+                    <p>
+                        <p>{!! str_limit($post->content, 100, '...') !!}</p>
+                </div>
+                @endforeach
             </div>
-
-                        </div>
-                                                                    <div class="blog-post" style="margin-top: 30px">
-                            <p class="">Mrs. Felicita D&#039;Amore DVM</p>
-                            <p class="">关注：0 | 粉丝：1｜ 文章：1</p>
-
-                            <div>
-                    <button class="btn btn-default like-button" like-value="1" like-user="55" _token="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy" type="button">取消关注</button>
+            <!-- /.tab-pane -->
+            <div class="tab-pane" id="tab_2">
+                @foreach($starsInfo as $stars)
+                <div class="blog-post" style="margin-top: 30px">
+                    <p class="">{{$stars->name}}</p>
+                    <p class="">关注：{{$stars->fan_posts_count}}｜粉丝：{{$stars->star_posts_count}}｜文章：{{$stars->user_posts_count}}</p>
+                    @include('user.badges.like', ['target_user' => $stars])
+                </div>
+                @endforeach
             </div>
-
-                        </div>
-                                                                    <div class="blog-post" style="margin-top: 30px">
-                            <p class="">Maybell VonRueden</p>
-                            <p class="">关注：0 | 粉丝：2｜ 文章：0</p>
-
-                            <div>
-                    <button class="btn btn-default like-button" like-value="1" like-user="3" _token="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy" type="button">取消关注</button>
-            </div>
-
-                        </div>
-                                                                    <div class="blog-post" style="margin-top: 30px">
-                            <p class="">Miss Melyssa Bogan DDS</p>
-                            <p class="">关注：2 | 粉丝：2｜ 文章：3</p>
-
-                            <div>
-                    <button class="btn btn-default like-button" like-value="1" like-user="2" _token="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy" type="button">取消关注</button>
-            </div>
-
-                        </div>
-                                    </div>
-                <div class="tab-pane" id="tab_3">
-                                    </div>
+            <div class="tab-pane" id="tab_3">
+                @foreach($fansInfo as $fans)
+                <div class="blog-post" style="margin-top: 30px">
+                    <p class="">{{$fans->name}}</p>
+                    <p class="">关注：{{$fans->fan_posts_count}}｜粉丝：{{$fans->star_posts_count}}｜文章：{{$fans->user_posts_count}}</p>
+                    @include('user.badges.like', ['target_user' => $fans])
+                </div>
+                @endforeach
             </div>
         </div>
-
-
     </div>
-    @endsection
-
+</div>
+@endsection

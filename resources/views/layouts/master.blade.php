@@ -47,16 +47,7 @@
                     </div>
                     <ul class="category-root list-group">
                         <li class="list-group-item">
-                            <a href="/topic/1">旅游
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/topic/2">轻松
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/topic/5">测试专题
-                            </a>
+                            <a href="/topic/1">1</a>
                         </li>
                     </ul>
                 </aside>
