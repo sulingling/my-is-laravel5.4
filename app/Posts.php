@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Posts extends Model {
@@ -62,14 +63,15 @@ class Posts extends Model {
 	 * @DateTime 2020-01-28
 	 * @version  [version]
 	 * @param    Builder    $query  [description]
-	 * @param    integer    $userId [description]
-	 * @return   [type]             [description]
+	 * @param    integer    $userId [用户ID]
+	 * @return   object             [对象]
 	 */
 	public function scopeAuthorBy(Builder $query, $userId = 0) {
 		return $query->where('user_id', $userId);
 	}
-	public function postTopic() {
-		return $this->hasMany('App\PostTopic', 'post_id', 'post_id');
+
+	public function postTopics() {
+		return $this->hasMany('App\PostTopics', 'post_id', 'post_id');
 	}
 
 	/**
@@ -82,7 +84,7 @@ class Posts extends Model {
 	 * @return   [type]            [description]
 	 */
 	public function scopeTopicNotBy(Builder $query, $topId = 0) {
-		$query->doesntHave('postTopic', 'and', function ($q) use ($topId) {
+		$query->doesntHave('postTopics', 'and', function ($q) use ($topId) {
 			$q->where('top_id', $topId);
 		});
 	}
