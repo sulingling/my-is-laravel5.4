@@ -46,9 +46,11 @@
                         专题
                     </div>
                     <ul class="category-root list-group">
+                        @foreach($topics as $topic)
                         <li class="list-group-item">
-                            <a href="/topic/1">1</a>
+                            <a href="/topic/{{$topic->top_id}}">{{$topic->name}}</a>
                         </li>
+                        @endforeach
                     </ul>
                 </aside>
             </div>

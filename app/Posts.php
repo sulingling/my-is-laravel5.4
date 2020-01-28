@@ -57,6 +57,37 @@ class Posts extends Model {
 	}
 
 	/**
+	 * 属于某个作者的文章
+	 * @Author   sulingling
+	 * @DateTime 2020-01-28
+	 * @version  [version]
+	 * @param    Builder    $query  [description]
+	 * @param    integer    $userId [description]
+	 * @return   [type]             [description]
+	 */
+	public function scopeAuthorBy(Builder $query, $userId = 0) {
+		return $query->where('user_id', $userId);
+	}
+	public function postTopic() {
+		return $this->hasMany('App\PostTopic', 'post_id', 'post_id');
+	}
+
+	/**
+	 * 不属于某个专题的文章
+	 * @Author   sulingling
+	 * @DateTime 2020-01-28
+	 * @version  [version]
+	 * @param    Builder    $query [description]
+	 * @param    integer    $topId [description]
+	 * @return   [type]            [description]
+	 */
+	public function scopeTopicNotBy(Builder $query, $topId = 0) {
+		$query->doesntHave('postTopic', 'and', function ($q) use ($topId) {
+			$q->where('top_id', $topId);
+		});
+	}
+
+	/**
 	 * 文章添加页面
 	 * @Author   sulingling
 	 * @DateTime 2020-01-11

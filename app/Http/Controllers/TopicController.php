@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Topics as TopicsModel;
+
 class TopicController extends Controller {
 
 	/**
@@ -10,7 +12,7 @@ class TopicController extends Controller {
 	 * @version  [version]
 	 * @return   [type]     [description]
 	 */
-	public function show() {
+	public function show(TopicsModel $topic) {
 		return view('topic.show');
 	}
 
