@@ -297,6 +297,8 @@ class ComposerStaticInit1cff50d3a5e82fac261e083069aebb6d
     );
 
     public static $classMap = array (
+        'AlterPostsTable' => __DIR__ . '/../..' . '/database/migrations/2020_01_29_220331_alter_posts_table.php',
+        'App\\AdminUsers' => __DIR__ . '/../..' . '/app/AdminUsers.php',
         'App\\Assists' => __DIR__ . '/../..' . '/app/Assists.php',
         'App\\Comments' => __DIR__ . '/../..' . '/app/Comments.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
@@ -326,6 +328,7 @@ class ComposerStaticInit1cff50d3a5e82fac261e083069aebb6d
         'App\\admin\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/admin/Controllers/Controller.php',
         'App\\admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/admin/Controllers/HomeController.php',
         'App\\admin\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/admin/Controllers/LoginController.php',
+        'App\\admin\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/admin/Controllers/UserController.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
@@ -429,6 +432,7 @@ class ComposerStaticInit1cff50d3a5e82fac261e083069aebb6d
         'Composer\\Installers\\YawikInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/YawikInstaller.php',
         'Composer\\Installers\\ZendInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
         'Composer\\Installers\\ZikulaInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
+        'CreateAdminUsersTable' => __DIR__ . '/../..' . '/database/migrations/2020_01_29_200506_create_admin_users_table.php',
         'CreateAssistsTable' => __DIR__ . '/../..' . '/database/migrations/2020_01_19_213014_create_assists_table.php',
         'CreateCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2020_01_18_212935_create_comments_table.php',
         'CreateFansTable' => __DIR__ . '/../..' . '/database/migrations/2020_01_20_222906_create_fans_table.php',

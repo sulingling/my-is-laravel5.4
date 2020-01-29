@@ -22,7 +22,18 @@ class LoginController extends Controller {
 	 * @return   [type]     [description]
 	 */
 	public function login() {
-		return '登出行为';
+		// 验证
+		$this->validate(request(), [
+			'name' => 'required|min:2',
+			'password' => 'required|min:5|max:10',
+		]);
+		// 逻辑
+		$user = request(['name', 'password']);
+		// 渲染
+		if (\Auth::guard('admin')->attempt($user)) {
+			return redirect('/admin/home');
+		}
+		return \Redirect::back()->withErrors('用户名密码不匹配');
 	}
 
 	/**
@@ -33,6 +44,7 @@ class LoginController extends Controller {
 	 * @return   [type]     [description]
 	 */
 	public function logout() {
-		return '登出行为';
+		\Auth::guard('admin')->logout();
+		return redirect('/admin/login');
 	}
 }

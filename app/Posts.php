@@ -10,6 +10,20 @@ class Posts extends Model {
 	protected $primaryKey = 'post_id';
 
 	/**
+	 * 定义全局的scope
+	 * @Author   sulingling
+	 * @DateTime 2020-01-29
+	 * @version  [version]
+	 * @return   [type]     [description]
+	 */
+	protected static function boot() {
+		parent::boot();
+		static::addGlobalScope('avaiable', function (Builder $builder) {
+			$builder->whereIn('status', [0, 1]);
+		});
+	}
+
+	/**
 	 * 评论模型
 	 * @Author   sulingling
 	 * @DateTime 2020-01-18

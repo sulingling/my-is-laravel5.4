@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AlterPostsTable' => $baseDir . '/database/migrations/2020_01_29_220331_alter_posts_table.php',
+    'App\\AdminUsers' => $baseDir . '/app/AdminUsers.php',
     'App\\Assists' => $baseDir . '/app/Assists.php',
     'App\\Comments' => $baseDir . '/app/Comments.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
@@ -35,6 +37,7 @@ return array(
     'App\\admin\\Controllers\\Controller' => $baseDir . '/app/admin/Controllers/Controller.php',
     'App\\admin\\Controllers\\HomeController' => $baseDir . '/app/admin/Controllers/HomeController.php',
     'App\\admin\\Controllers\\LoginController' => $baseDir . '/app/admin/Controllers/LoginController.php',
+    'App\\admin\\Controllers\\UserController' => $baseDir . '/app/admin/Controllers/UserController.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
@@ -138,6 +141,7 @@ return array(
     'Composer\\Installers\\YawikInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/YawikInstaller.php',
     'Composer\\Installers\\ZendInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
     'Composer\\Installers\\ZikulaInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
+    'CreateAdminUsersTable' => $baseDir . '/database/migrations/2020_01_29_200506_create_admin_users_table.php',
     'CreateAssistsTable' => $baseDir . '/database/migrations/2020_01_19_213014_create_assists_table.php',
     'CreateCommentsTable' => $baseDir . '/database/migrations/2020_01_18_212935_create_comments_table.php',
     'CreateFansTable' => $baseDir . '/database/migrations/2020_01_20_222906_create_fans_table.php',
