@@ -64,7 +64,7 @@ class AdminUsers extends Authenticatable {
 	 * @param    [type]     $permission [description]
 	 * @return   [type]                 [description]
 	 */
-	public function haPermission($permission) {
+	public function hasPermission($permission) {
 		return $this->isInRoles($permission->roles);
 	}
 

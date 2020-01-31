@@ -15,8 +15,8 @@ class AdminPermissions extends Model {
 	 * @return   [type]     [description]
 	 */
 	public function roles() {
-		return $this->belongsToMany('App\AdminRoles', 'admin_permission_role', 'pre_id', 'role_id')
-			->withPivot(['pre_id', 'role_id']);
+		return $this->belongsToMany('App\AdminRoles', 'admin_permission_role', 'per_id', 'role_id')
+			->withPivot(['per_id', 'role_id']);
 	}
 
 	/**
