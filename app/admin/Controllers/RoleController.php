@@ -47,7 +47,7 @@ class RoleController extends Controller {
 	}
 
 	/**
-	 *  角色权限关系页面
+	 *  角色权限关系页面【一个角色下面有所有的权限】
 	 * @Author   sulingling
 	 * @DateTime 2020-01-31
 	 * @version  [version]
@@ -56,6 +56,7 @@ class RoleController extends Controller {
 	public function permission(AdminRoles $role) {
 		// 获取所有权限
 		$permissions = AdminPermissions::all();
+
 		// 获取当前角色权限
 		$myPermissions = $role->permissions;
 

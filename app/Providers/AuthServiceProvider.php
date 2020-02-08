@@ -24,6 +24,7 @@ class AuthServiceProvider extends ServiceProvider {
 	public function boot() {
 		$this->registerPolicies();
 
+		// 查看所有的权限
 		$adminPerInfo = AdminPermissions::all();
 		foreach ($adminPerInfo as $adminPre) {
 			Gate::define($adminPre->name, function ($user) use ($adminPre) {

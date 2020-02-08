@@ -13,6 +13,7 @@ Route::group(['prefix' => 'admin'], function () {
 		// 首页
 		Route::get('/home', '\App\admin\Controllers\HomeController@index');
 
+		// 系统管理
 		Route::group(['middleware' => 'can:system'], function () {
 			// 管理人员模块
 			Route::get('/users', '\App\admin\Controllers\UserController@index');
@@ -34,12 +35,14 @@ Route::group(['prefix' => 'admin'], function () {
 			Route::post('/roles/{role}/permission', '\App\admin\Controllers\RoleController@storePermission');
 		});
 
+		// 文章管理
 		Route::group(['middleware' => 'can:post'], function () {
 			// 审核模块
 			Route::get('/posts', '\App\admin\Controllers\PostController@index');
 			Route::post('/posts/{post}/status', '\App\admin\Controllers\PostController@status');
 		});
 
+		// 专题管理
 		Route::group(['middleware' => 'can:topic'], function () {
 			Route::resource('/topics', '\App\admin\Controllers\TopicController', ['only' => ['index', 'create', 'store', 'desc']]);
 		});
