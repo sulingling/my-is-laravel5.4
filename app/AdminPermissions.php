@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class AdminPermissions extends Model {
 	// 自定义主键
 	protected $primaryKey = 'per_id';
+
 	/**
 	 * 该权限属于哪个角色
 	 * @Author   sulingling

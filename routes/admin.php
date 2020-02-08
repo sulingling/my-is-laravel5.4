@@ -40,6 +40,10 @@ Route::group(['prefix' => 'admin'], function () {
 			Route::post('/posts/{post}/status', '\App\admin\Controllers\PostController@status');
 		});
 
+		Route::group(['middleware' => 'can:topic'], function () {
+			Route::resource('/topics', '\App\admin\Controllers\TopicController', ['only' => ['index', 'create', 'store', 'desc']]);
+		});
+
 	});
 
 });

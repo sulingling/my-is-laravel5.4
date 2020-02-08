@@ -13,6 +13,7 @@ class AppServiceProvider extends ServiceProvider {
 	public function boot() {
 		\View::composer('layouts.master', function ($view) {
 			$topics = \App\Topics::all();
+			dd($topics);
 			$view->with('topics', $topics);
 		});
 	}
