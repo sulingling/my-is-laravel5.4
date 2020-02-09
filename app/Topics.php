@@ -28,4 +28,22 @@ class Topics extends Model {
 	public function postTopics() {
 		return $this->hasMany('App\PostTopics', 'top_id', 'top_id');
 	}
+
+	/**
+	 * 添加专题
+	 * @Author   sulingling
+	 * @DateTime 2020-02-09
+	 * @version  [version]
+	 * @param    array      [前台提交过来的数据]
+	 * @return   boolean.   [true | false]
+	 */
+	public static function TopicsSave($params = []) {
+		if (empty($params)) {
+			return false;
+		}
+		$model = new self();
+		$model->name = $params['name'];
+		return $model->save();
+
+	}
 }

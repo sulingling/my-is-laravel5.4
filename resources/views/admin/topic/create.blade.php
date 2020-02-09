@@ -9,7 +9,7 @@
                         <h3 class="box-title">增加专题</h3>
                     </div>
                     <form role="form" action="/admin/topics" method="POST">
-                        <input type="hidden" name="_token" value="RPPMc0lhvtynKELDZljXlz9UZI9uNc55ip1P8GCM">
+                        {{csrf_field()}}
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">专题名</label>

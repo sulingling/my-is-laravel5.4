@@ -1,19 +1,20 @@
 <aside class="main-sidebar">
     <section class="sidebar">
         <ul class="sidebar-menu">
-            @can('system')
             <li class="treeview active">
-                <a href="#">
+                <a href="/admin/home">
                     <i class="fa fa-dashboard"></i> <span>系统管理</span>
                     <span class="pull-right-container"></span>
                 </a>
+                @can('system')
                 <ul class="treeview-menu">
                     <li><a href="/admin/permissions"><i class="fa fa-circle-o"></i> 权限管理</a></li>
                     <li><a href="/admin/users"><i class="fa fa-circle-o"></i> 用户管理</a></li>
                     <li><a href="/admin/roles"><i class="fa fa-circle-o"></i> 角色管理</a></li>
                 </ul>
+                @endcan
             </li>
-            @endcan
+            
             @can('post')
             <li class="active treeview">
                 <a href="/admin/posts">
@@ -21,6 +22,7 @@
                 </a>
             </li>
             @endcan
+
             @can('topic')
             <li class="active treeview">
                 <a href="/admin/topics">
@@ -28,6 +30,7 @@
                 </a>
             </li>
             @endcan
+            
             @can('notice')
             <li class="active treeview">
                 <a href="/admin/notices">
