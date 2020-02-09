@@ -99,6 +99,29 @@ class Users extends Authenticatable {
 	}
 
 	/**
+	 * 用户接收到的消息
+	 * @Author   sulingling
+	 * @DateTime 2020-02-09
+	 * @version  [version]
+	 * @return   [type]
+	 */
+	public function notices(){
+		return $this->belongsToMany('App\Notices', 'user_notice', 'user_id', 'not_id')
+		->withPivot(['user_id', 'not_id']);
+	}
+
+	/**
+	 * 给用户增加通知
+	 * @Author   sulingling
+	 * @DateTime 2020-02-09
+	 * @version  [version]
+	 * @param    [type]
+	 */
+	public function addNotice($notice){
+		return $this->notices()->save($notice);
+	}
+
+	/**
 	 * 用户注册
 	 * @Author   sulingling
 	 * @DateTime 2020-01-16

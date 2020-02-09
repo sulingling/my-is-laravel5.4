@@ -27,7 +27,6 @@ $(".post-audit").click(function(event){
 
 // 专题删除
 $(".resource-delete").click(function(event){
-	console.log(12);return false;
 	if(comfirm('确定执行删除操作吗？')) {
 		return ture;
 	}

@@ -48,6 +48,10 @@ Route::group(['prefix' => 'admin'], function () {
 			Route::resource('/topics', '\App\admin\Controllers\TopicController', ['only' => ['index', 'create', 'store']]);
 		});
 
+		// 消息管理
+		Route::group(['middleware' => 'can:notice'], function () {
+			Route::resource('/notices', '\App\admin\Controllers\NoticeController', ['only' => ['index', 'create', 'store']]);
+		});
 	});
 
 });
