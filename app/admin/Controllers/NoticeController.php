@@ -43,7 +43,11 @@ class NoticeController extends Controller {
 			'content' => 'required|string|max:1000'
 		]);
 		$params = request()->all();
-		NoticesModel::noticeSave($params);
+		$notice = NoticesModel::noticeSave($params);
+		if (!empty($notice)){
+			dispatch(new \App\Jobs\SendMessage($notice));
+		}
+		
 		return redirect('/admin/notices');
 	}
 }

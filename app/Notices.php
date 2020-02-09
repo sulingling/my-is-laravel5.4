@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Notices extends Model
 {
+    // 自定义主键
+    protected $primaryKey = 'not_id';
 
 	/**
 	 *  添加消息
@@ -21,6 +23,6 @@ class Notices extends Model
     	$model = new self();
     	$model->title = $params['title'];
     	$model->content = $params['content'];
-    	return $model->save();
+    	return $model->save() ? $model : false;
     }
 }
