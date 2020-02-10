@@ -36,7 +36,7 @@
         @foreach($posts as $post)
         <div class="blog-post">
             <h2 class="blog-post-title"><a href="/posts/{{$post->post_id}}">{{$post->title}}</a></h2>
-            <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}} <a href="/user/5">{{$post->user->name ?? ''}}</a></p>
+            <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}} <a href="/user/{{$post->user->user_id ?? 0}}">{{$post->user->name ?? ''}}</a></p>
             <p>{!! str_limit($post->content, 100, '...') !!}<p class="blog-post-meta">赞 {{$post->assists_count}} | 评论 {{$post->comments_count}}</p>
         </div>
         @endforeach

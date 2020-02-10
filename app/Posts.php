@@ -2,11 +2,26 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Posts extends Model {
 	// 自定义主键
 	protected $primaryKey = 'post_id';
+
+	/**
+	 * 定义全局的scope
+	 * @Author   sulingling
+	 * @DateTime 2020-01-29
+	 * @version  [version]
+	 * @return   [type]     [description]
+	 */
+	protected static function boot() {
+		parent::boot();
+		static::addGlobalScope('avaiable', function (Builder $builder) {
+			$builder->whereIn('status', [0, 1]);
+		});
+	}
 
 	/**
 	 * 评论模型
@@ -54,6 +69,38 @@ class Posts extends Model {
 	 */
 	public function assists() {
 		return $this->hasMany('App\Assists', 'post_id', 'post_id');
+	}
+
+	/**
+	 * 属于某个作者的文章
+	 * @Author   sulingling
+	 * @DateTime 2020-01-28
+	 * @version  [version]
+	 * @param    Builder    $query  [description]
+	 * @param    integer    $userId [用户ID]
+	 * @return   object             [对象]
+	 */
+	public function scopeAuthorBy(Builder $query, $userId = 0) {
+		return $query->where('user_id', $userId);
+	}
+
+	public function postTopics() {
+		return $this->hasMany('App\PostTopics', 'post_id', 'post_id');
+	}
+
+	/**
+	 * 不属于某个专题的文章
+	 * @Author   sulingling
+	 * @DateTime 2020-01-28
+	 * @version  [version]
+	 * @param    Builder    $query [description]
+	 * @param    integer    $topId [description]
+	 * @return   [type]            [description]
+	 */
+	public function scopeTopicNotBy(Builder $query, $topId = 0) {
+		$query->doesntHave('postTopics', 'and', function ($q) use ($topId) {
+			$q->where('top_id', $topId);
+		});
 	}
 
 	/**
