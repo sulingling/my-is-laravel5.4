@@ -88,7 +88,7 @@ class PostsController extends Controller {
 		$this->authorize('update', $posts);
 		$this->validate(request(), [
 			'title' => 'required|string|max:100|min:5', //非空|字符串|最大长度|最小长度
-			'content' => 'required|string|max:500|min:10',
+			'content' => 'required|string|max:5000|min:10',
 		]);
 		$params = request()->all();
 
