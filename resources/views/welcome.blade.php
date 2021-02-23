@@ -79,7 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
+<<<<<<< HEAD
                     Laravel
+=======
+                    Laravel54
+>>>>>>> e11b8bf14473c4dc43accf0fe30e28b7348592de
                 </div>
 
                 <div class="links">
