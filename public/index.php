@@ -1,5 +1,5 @@
 <?php
-// 你好
+
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
